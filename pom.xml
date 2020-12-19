@@ -73,7 +73,7 @@ under the License.
 
         <accumulo.version>1.6.4</accumulo.version> <!-- Newest: 1.7.0 -->
         <hadoop.version>2.5.0</hadoop.version> <!-- Newest: 2.7.1 -->
-        
+
         <zookeeper.version>3.4.6</zookeeper.version>
 
         <pig.version>0.9.2</pig.version> <!-- Newest: 0.15.0 -->
@@ -90,7 +90,7 @@ under the License.
         <commons.codec.version>1.10</commons.codec.version> <!-- Newest: 1.10 -->
         <commons.pool.version>1.6</commons.pool.version> <!-- Newest: 1.6 -->
         <commons.io.version>2.5</commons.io.version>
-        
+
         <gmaven.version>1.3</gmaven.version> <!-- Newest: 1.5 -->
 
         <guava.version>14.0.1</guava.version> <!-- Newest: 18.0 -->
@@ -121,7 +121,7 @@ under the License.
 
         <!-- the maven-release-plugin makes this recommendation, due to plugin bugs -->
         <maven.min-version>3.0.4</maven.min-version>
-        
+
         <fluo.version>1.0.0-incubating</fluo.version>
 
         <plexus.version>3.0.8</plexus.version>
@@ -137,12 +137,12 @@ under the License.
         <kafka.version>0.10.0.1</kafka.version>
         <kryo.version>3.0.3</kryo.version>
         <jcabi-manifeses.version>1.1</jcabi-manifeses.version>
-        
+
         <!-- set profile property defaults -->
         <skip.rya.it>true</skip.rya.it>  <!-- modified by  -P enable-it  -->
         <skip.rpm.distribution>true</skip.rpm.distribution> <!-- modify by -P build-rpms -->
     </properties>
-    
+
     <!-- Enable this profile if you want to include Geo functions within Rya. "mvn ... -P geoindexing" -->
     <profiles>
         <profile>
@@ -197,7 +197,7 @@ under the License.
                         <artifactId>geomesa-accumulo-distributed-runtime_2.11</artifactId>
                         <version>${geomesa.version}</version>
                     </dependency>
-                    
+
                     <!-- Geowave dependencies. -->
                     <dependency>
                         <groupId>mil.nga.giat</groupId>
@@ -214,7 +214,7 @@ under the License.
                         <artifactId>geowave-adapter-vector</artifactId>
                         <version>${geowave.version}</version>
                     </dependency>
-                    
+
                     <!-- Misc dependencies. -->
                     <dependency>
                         <groupId>com.vividsolutions</groupId>
@@ -223,7 +223,7 @@ under the License.
                     </dependency>
                 </dependencies>
             </dependencyManagement>
-            
+
             <repositories>
                 <repository>
                     <id>LocationTech - SNAPSHOT</id>
@@ -290,7 +290,7 @@ under the License.
                 </repository>
             </repositories>
         </profile>
-    
+
         <!-- enable this profile "mvn ... -P enable-it" -->
         <profile>
             <id>enable-it</id>
@@ -298,7 +298,7 @@ under the License.
                 <skip.rya.it>false</skip.rya.it>
             </properties>
         </profile>
-        
+
         <!-- enable this profile "mvn ... -P build-rpms" -->
         <profile>
             <id>build-rpms</id>
@@ -355,7 +355,7 @@ under the License.
             </reporting>
         </profile>
     </profiles>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -748,7 +748,7 @@ under the License.
                 <artifactId>jul-to-slf4j</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-common</artifactId>
@@ -1029,7 +1029,7 @@ under the License.
                 <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
-            
+
             <!-- JMH Benchmarking tool dependencies. -->
             <dependency>
                 <groupId>org.openjdk.jmh</groupId>
@@ -1042,7 +1042,7 @@ under the License.
                 <version>${jmh.version}</version>
                 <scope>provided</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>com.github.stephenc.findbugs</groupId>
                 <artifactId>findbugs-annotations</artifactId>
@@ -1053,7 +1053,7 @@ under the License.
                 <artifactId>jcip-annotations</artifactId>
                 <version>${jcip.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.apache.accumulo</groupId>
                 <artifactId>accumulo-minicluster</artifactId>
@@ -1174,7 +1174,7 @@ under the License.
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <configuration>
                         <systemPropertyVariables>
-                            <!--  
+                            <!--
                             Zookeeper tries to resolve localhost to IPv6 by default.
                             If on an IPv4 network, using -Djava.net.preferIPv4Stack=true
                             can make some IT's that create many connections run 3-5x faster.
@@ -1310,7 +1310,7 @@ under the License.
                         <threshold>Low</threshold>
                     </configuration>
                 </plugin>
-                <plugin>   
+                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>rpm-maven-plugin</artifactId>
                     <version>2.2.0</version>
@@ -1418,7 +1418,7 @@ under the License.
                                 <property name="eachLine" value="true" />
                             </module>
                             -->
-                            
+
                             <module name="TreeWalker">
                                 <module name="OneTopLevelClass" />
                                 <!--
@@ -1427,7 +1427,7 @@ under the License.
                                     <property name="message" value="Line has trailing whitespace." />
                                 </module>
                                 -->
-                                <!-- 
+                                <!--
                                 <module name="RegexpSinglelineJava">
                                     <property name="format" value="[@]see\s+[{][@]link" />
                                     <property name="message" value="Javadoc @see does not need @link: pick one or the other." />
@@ -1446,7 +1446,7 @@ under the License.
                                     <property name="message" value="Please comment out stdout debugging utilities like FluoITHelper.printFluoTable()" />
                                     <property name="ignoreComments" value="true" />
                                 </module>
-                                <!-- 
+                                <!--
                                 <module name="RegexpSinglelineJava">
                                     <property name="format" value="junit[.]framework[.]" />
                                     <property name="message" value="Please use JUnit 4 APIs instead of Junit 3" />
