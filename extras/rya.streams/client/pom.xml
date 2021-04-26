@@ -24,10 +24,10 @@ under the License.
         <artifactId>rya.streams.parent</artifactId>
         <version>4.0.1-incubating-SNAPSHOT</version>
     </parent>
-    
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>rya.streams.client</artifactId>
-    
+
     <name>Apache Rya Streams Client</name>
     <description>
         This module contains the Rya Streams Drivers.
@@ -73,7 +73,7 @@ under the License.
             <groupId>org.eclipse.rdf4j</groupId>
             <artifactId>rdf4j-queryresultio-sparqljson</artifactId>
         </dependency>
-            
+
         <!-- Third Party dependencies -->
         <dependency>
             <groupId>com.beust</groupId>
@@ -88,7 +88,7 @@ under the License.
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>
-        
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>junit</groupId>
@@ -112,7 +112,7 @@ under the License.
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <pluginManagement>
             <plugins>
